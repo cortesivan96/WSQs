@@ -1,1 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+  int a,b,s,r,m,d,p;
+cout<<"Escribe dos numeros y te dare la suma, la resta, la multiplicacion, la division y el residuo"<< endl;
+cout<<"Primer numero: ";
+cin>> a;
+cout<<"Segundo numero: ";
+cin>> b;
+  s = a + b;
+  r = a - b;
+  m = a * b;
+  d = a / b;
+  p = a % b;
+  cout<<"El resultado es...."<< endl;
+  cout<<"Suma: "<< s << endl;
+  cout<<"Resta: "<< r << endl;
+  cout<<"Multiplicacion: "<< m << endl;
+  cout<<"Division: "<< d << endl;
+  cout<<"Residuo: "<< p << endl;
+}
 
