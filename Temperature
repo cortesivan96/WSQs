@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+  double c, f;
+  cout << "Write the temperature in Farenheit so I can convert it into Celcius!!" << endl;
+  cin >> f;
+  c =  5 *(f - 32) / 9;
+  cout<< "The temperature in Celius is: " << c << endl;
+  if (c <= 100){
+    cout << "Water doesn't boil in this temperature";
+  }
+  else {
+    cout<< "Water boils at this temperature";
+  }
+}
+
