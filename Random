@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+  int n;
+  srand(time(NULL));
+  int r=rand() % 100 + 1;
+  cout<< "I am thinking in a number between 1 and 100, I dare you to guess it!!"<< endl;
+  cin>>n;
+  while (n!=r){
+  if (n<r){
+      cout << "Nope, it is a higher number, try again" << endl;
+      cin >>n;
+    }
+    if (n>r){
+      cout << "Sorry, it is a lower number, try again"<< endl;
+      cin >>n;
+    }}
+  if(n==r){
+
+  cout <<"YESSSSS, THATS THE NUMBER. GREAT JOB"<< endl;
+}
+return 0;
+}
+
