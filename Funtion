@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int s(int x, int y ){
+  int s=x+y;
+  return s;
+}
+
+int d(int x, int y ){
+  int d=x-y;
+  return d;
+}
+
+int m(int x, int y ){
+  int m=x*y;
+  return m;
+}
+
+int di(int x, int y ){
+  int di=x/y;
+  return di;
+}
+
+int r(int x, int y ){
+  int r=x%y;
+  return r;
+
+}
+
+int main(){
+  int x, y;
+    cout<<"Type two numbers and i will add them, substract them, multiply them, divide them and give the reminder of the division!!!"<<endl;
+    cout<<"First number"<<endl;
+      cin>>x;
+    cout<<"Second number"<<endl;
+      cin>>y;
+
+    cout<< "SUM: "<< s(x,y)<<endl;
+    cout<< "SUBTRACTION: "<<d(x,y)<<endl;
+    cout<< "MULTIPLICATION: "<< m(x,y)<<endl;
+    cout<< "DIVISION: "<<di(x,y)<<endl;
+    cout<< "REMINDER: "<<r(x,y) <<endl;
+return 0;
+}
