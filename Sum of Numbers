@@ -1,20 +1,21 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-int n;
-cout << "Enter an Positive number,ONLY POSITIVE " << endl;
-cin >> n;
+int main() {
+  int x, y;
+  int c =0;
+  cout<<"Give me two numbers and i will give you the sum of all the numbers in that range "<< endl;
+  cout<<"Lower bound: ";
+  cin>>x;
+  cout<<"Upper bound:" ;
+  cin>>y;
 
-int f,a;
 
-	for (a = 0; a <= n; a++){
-
-		if (a == 0)
-		f= 1;
-		else
-		f = f * a;
+  while (x<=y){
+  c = c + y;
+  x++;
 }
-	cout << "Factorial: "<< f << endl;
-return 0;
+ cout<<" the sum of the integers is: "<< c << endl;
+ return 0;
 }
+
