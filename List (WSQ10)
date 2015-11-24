@@ -1,0 +1,63 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main(){
+ float n [10];
+ 
+  cout << "Integer 1: " ;
+  cin >> n[0];
+
+  cout <<"Integer 2: ";
+  cin >> n[1];
+
+  cout << "Integer 3: ";
+  cin >> n[2];
+
+  cout << "Integer 4: ";
+  cin >> n[3];
+
+  cout << "Integer 5: ";
+  cin >> n[4];
+
+  cout << "Integer 6: ";
+  cin >> n[5];
+
+  cout << "Integer 7: ";
+  cin >> n[6];
+
+  cout << "Integer : ";
+  cin >> n[7];
+
+  cout <<"Integer 9: ";
+  cin >> n[8];
+
+  cout << "Integer 10: ";
+  cin >> n[9];
+
+
+float sum=0;
+
+for(int x= 0; x<10; x++){
+sum = sum + n[x];
+}
+
+float ave= sum/10;
+
+float dev=0;
+
+for(int x= 0; x<10; x++){
+  dev= dev + ((n[x]- ave)* (n[x]-ave));
+}
+dev= dev/9;
+dev= sqrt(dev);
+
+
+
+cout << "The total sum is: " << sum << endl;
+cout << "The average is: " << ave << endl;
+cout << "The standard deviation is: " << dev<<endl;
+
+return 0;
+}
