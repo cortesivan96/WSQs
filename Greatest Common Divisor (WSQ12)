@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int common(int x, int y){
+if (x<y){
+  return common(y,x);
+}
+  int z = x % y;
+  if(z==0){
+    return y;
+  }
+  else{
+  return common(y,z);
+}
+}
+
+int main()
+{
+  int a, b;
+  cout << "Number 1: ";
+  cin>>a;
+  cout << "Number 2: ";
+  cin>>b;
+  cout << "The greatest common divisor is: " << common(a,b) << endl;
+  return 0;
+}
