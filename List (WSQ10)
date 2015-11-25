@@ -27,7 +27,7 @@ int main(){
   cout << "Integer 7: ";
   cin >> n[6];
 
-  cout << "Integer : ";
+  cout << "Integer 8: ";
   cin >> n[7];
 
   cout <<"Integer 9: ";
