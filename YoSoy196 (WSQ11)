@@ -1,0 +1,71 @@
+#include <string>
+#include <iostream>
+using namespace std;
+#include "BigIntegerLibrary.hh"
+
+bool is_palindrome(BigInteger n){
+	string x = bigIntegerToString (n);
+	if (x == string(x.begin(), x.end())){
+    return true;
+	}
+	else
+	{
+    return false;
+	}
+}
+
+BigInteger apply196(BigInteger n){
+	string y = bigIntegerToString(n);
+	string (y.begin(), y.end());
+	BigInteger z = stringToBigInteger (y);
+	n = n + z;
+	return n;
+}
+
+
+int main() {
+	int low, up, zero = 0, non = 0, lychrel = 0;
+	BigInteger a;
+cout << "Give me the lower bound:"<<endl;
+cin >> low;
+cout << "Give me the upper bound:"<<endl;
+cin >> up;
+
+for (int i = low; i<= up; i++)
+{
+	if(is_palindrome(i) == true)
+	{
+		zero++;
+	}
+	else
+	{
+		a = apply196(i);
+		for (int j = 1; j<=30; j++)
+		{
+			if(is_palindrome (a) == true)
+			{
+
+				non++;
+				break;
+			}
+			else
+			{
+				a = apply196(a);
+			}
+			if(is_palindrome (a) == false)
+			{
+				cout << a << "Lychrel number detected";
+        lychrel++;
+      	cout<<endl;
+}
+}
+}
+}
+cout << "Final Result" << endl;
+cout << "The range:  "<< low << " to "<< up << endl;
+cout << "Numbers Analysed: "<< (upper-lower)+1 <<endl;
+cout << "Natural palindromes: " <<  zero << endl;
+cout << "Non-Lychrel numbers: "<< non << endl;
+cout << "Lychrel numbers: " << lychrel << endl;
+
+}
