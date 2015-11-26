@@ -1,0 +1,59 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <sstream>
+using namespace std;
+
+int main (){
+  string Read;
+  string me;
+  string cg;
+  string hg;
+
+  int n = 57;
+  float x;
+  float y = 0.0;
+  float high;
+  float a = 0.0;
+  float price;
+  float e = 0.0;
+
+  ifstream read_file("93cars.dat.txt");
+
+
+  if (read_file.is_open()){
+
+
+    for (int i =0; i < 93; i++){
+        getline(read_file, Read);
+        me = Read.substr(42,4);
+        istringstream buffer(me);
+        buffer >> pe;
+        cg = Read.substr(52,2);
+        istringstream buffer2(cg);
+        buffer2 >> x;
+        hg = Read.substr(55,2);
+        istringstream buffer3(hg);
+        buffer3 >> hh;
+
+        a = a + hh;
+        e = e + pe;
+        y = y + x;
+
+    getline(re, Read);
+    }
+    re.close();
+  }
+
+  else{
+  cout << "Failure" << endl;
+  }
+
+  e = e/93;
+  y = y/93;
+  a = a/93;
+  cout << "price: " << e << endl;
+  cout << "miles per gallon in town: " << y << endl;
+  cout << "miles per gallon in the highway: " << a << endl;
+  return 0;
+}
