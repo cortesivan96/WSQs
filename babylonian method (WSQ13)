@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+double square_root (int n){
+double s=x;
+while ((s-n/s)/2> 0.000000001){
+s= (s+n/s)/2;
+}
+return s;
+}
+int main (){
+  int n;
+  cout << "Enter a number: " <<endl;
+  cin >> n;
+  cout << "Its square root is: " << square_root (n) <<endl;
+  return 0;
+}
